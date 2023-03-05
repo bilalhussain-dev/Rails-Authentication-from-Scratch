@@ -36,3 +36,9 @@
 .list-item-errors {
     padding: 0 10px;
 }
+
+.card-footer-area {
+    font-size: 13px !important;
+    color: #777;
+    margin-top: 20px;
+}
