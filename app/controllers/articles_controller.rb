@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 
   before_action :set_article_params, only: [:show, :edit, :update, :destroy]
   def index
-    @articles = Article.all
+    @articles = Article.all.page(params[:page])
   end
   def new
     @article = Article.new

@@ -85,3 +85,21 @@
     text-decoration: none;
     color: #fff;
 }
+
+.pagination span {
+    margin: 0 10px;
+    background-color: #32cc32;
+    color: #fff;
+    width: 70px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pagination a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.pagination .current {
+    background-color: blue;
+}
