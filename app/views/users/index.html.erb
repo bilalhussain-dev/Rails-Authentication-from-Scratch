@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>All Contributers</h1>
+   <div class="row">
+    <% @users.each do |user| %>
+       <div class="col-md-4 mb-2">
+         <div class="card contributer p-2">
+           <div class="d-flex align-item-center">
+              <%= gravatar_for user%>
+             <div class="author-name">
+               <a href = "<%= user_path(user) %>"> <%= user.username %></a>
+             </div>
+           </div>
+           <div class="card-body">
+             <span class="badge__count">
+               <a href="<%= user_path(user) %>"><%= pluralize(user.articles.count, "Article") %></a>
+             </span>
+           </div>
+         </div>
+       </div>
+    <% end %>
+  </div>
+</div>

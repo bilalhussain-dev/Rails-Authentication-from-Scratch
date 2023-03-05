@@ -42,3 +42,46 @@
     color: #777;
     margin-top: 20px;
 }
+.profile--user {
+    width: 80% !important;
+    margin: 20px auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.image-gravtar {
+    margin-bottom: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.badge-profile {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 20px;
+}
+.contributer img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.author-name a {
+    text-decoration: none;
+    color: #333;
+}
+.badge__count {
+    text-decoration: none;
+    color: #fff;
+    background-color: #32cc32;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.badge__count a {
+    text-decoration: none;
+    color: #fff;
+}
