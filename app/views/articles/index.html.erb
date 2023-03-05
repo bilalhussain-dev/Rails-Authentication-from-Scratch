@@ -1,0 +1,23 @@
+
+<div class="blog__post mt-4">
+
+  <span class="badge badge-success text-success"><%= pluralize(@articles.count, 'article') %> published</span>
+
+  <% if @articles.length === 0 %>
+    <h2>No Post Found.</h2>
+  <%end %>
+  <% @articles.each do |post| %>
+
+    <div class="card blog_post">
+      <h2 class="blog__post__title"><%= post.title %></h2>
+      <p class="blog__post__description"><%= truncate(post.description, length: 250) %></p>
+      <hr>
+      <div class="post__actions">
+        <%= link_to 'Edit Post', edit_article_path(post) %>
+        <%= link_to 'View Post', article_path(post) %>
+        <%= link_to 'Delete Post', article_path(post), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+
+  <% end %>
+</div>

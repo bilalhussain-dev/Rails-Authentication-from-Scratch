@@ -1,0 +1,15 @@
+
+<div class="blog__post mt-4">
+
+    <span>5 Min Read</span>
+
+    <div class="card blog_post">
+      <h2 class="blog__post__title"><%= @article.title %></h2>
+      <p class="blog__post__description"><%= @article.description %></p>
+      <hr>
+      <div class="post__actions">
+        <%= link_to 'Edit Post', edit_article_path(@article) %>
+        <%= link_to 'Delete Post', article_path(@article), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+</div>
