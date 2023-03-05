@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "privacy-policy", to: "pages#privacy-policy"
   resources :articles
+
+
+#   Signing up users
+  get "signup", to: "users#new"
+  resources :users, except: [:new]
+  # post "users", to: "users#create"
 end
